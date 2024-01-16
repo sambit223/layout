@@ -1,0 +1,36 @@
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 20% 1fr 70px ;
+    grid-template-rows: 80px 1fr 15%;
+    gap: 10px;
+    grid-template-areas:
+    "header-section header-section header-section"
+    "nav-section content-section ads-section"
+    "nav-section footer-section footer-section";
+}
+
+header , article , aside , nav , footer {
+    padding: 8px;
+    background-color: tomato;
+}
+
+#pageHeader {
+    grid-area: header-section;
+}
+
+#mainArticle {
+    grid-area: content-section;
+}
+
+#mainNav {
+    grid-area: nav-section;
+}
+
+#sidedds {
+    grid-area: ads-section;
+}
+
+#pageFooter {
+    grid-area: footer-section;
+}

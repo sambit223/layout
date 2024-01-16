@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0 ;
+            margin: 0 ;
+        }
+    body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 20% 50% 30% ;
+    grid-template-rows: 20% 60% 20%;
+    gap: 3px;
+    grid-template-areas:
+    "header-section header-section header-section"
+    "nav-section content-section ads-section"
+    "nav-section footer-section footer-section";
+}
+
+header , article , aside , nav , footer {
+    padding: 8px;
+    background-color: tomato;
+}
+
+#pageHeader {
+    grid-area: header-section;
+}
+
+#mainArticle {
+    grid-area: content-section;
+}
+
+#mainNav {
+    grid-area: nav-section;
+}
+
+#sidedds {
+    grid-area: ads-section;
+}
+
+#pageFooter {
+    grid-area: footer-section;
+}
+
+@media all and (max-width:400px) {
+    body{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header-section"
+        "content-section"
+        "nav-section"
+        "ads-section"
+        "footer-section" ;
+    }
+}
+    </style>
+</head>
+<body className='container'>
+    <header id='pageHeader'>Header</header>
+    <article id='mainArticle'>Main Article</article>
+    <nav id='mainNav'>nav</nav>
+    <aside id='sideads'>Ads</aside>
+    <footer id='pageFooter'>footer</footer>
+</body>
+</html>
